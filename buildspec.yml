@@ -1,0 +1,32 @@
+# GU TF
+# Application mapping Deploy
+#
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk11
+
+    commands: 
+      - echo Nothing to Install
+
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre-build phase
+
+
+  
+  build:
+    commands:
+      - echo Build start on 'date'
+      - mvn clean package
+  
+  post_build:
+    commands:
+      - echo Build completed on 'date'
+
+artifacts:
+  files:
+    - '**/*'
